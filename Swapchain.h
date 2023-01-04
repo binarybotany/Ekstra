@@ -10,8 +10,10 @@
 
 namespace Ekstra {
 struct Swapchain {
-  Microsoft::WRL::ComPtr<IDXGIDevice3> dxgiDevice;
   Microsoft::WRL::ComPtr<IDXGISwapChain> swapchain;
+  Microsoft::WRL::ComPtr<ID3D11Texture2D> backBuffer;
+  Microsoft::WRL::ComPtr<ID3D11RenderTargetView> renderTarget;
+  D3D11_TEXTURE2D_DESC description;
 };
 
 struct SwapchainController {
