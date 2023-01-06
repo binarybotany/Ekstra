@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "RenderWindow.h"
 
 namespace Ekstra {
@@ -40,12 +41,6 @@ void RenderWindowController::MessageLoop(const RenderWindow &window) {
 }
 
 HRESULT RenderWindowController::RegisterWindowClass(RenderWindow &window) {
-  HICON icon = NULL;
-  WCHAR exePath[1024];
-  GetModuleFileName(NULL, exePath, 1024);
-
-  if (window.instance == 0) icon = ExtractIcon(window.instance, exePath, 0);
-
   WNDCLASS windowClass;
   ZeroMemory(&windowClass, sizeof(WNDCLASS));
 
@@ -53,7 +48,7 @@ HRESULT RenderWindowController::RegisterWindowClass(RenderWindow &window) {
   windowClass.cbWndExtra = NULL;
   windowClass.hbrBackground = NULL;
   windowClass.hCursor = LoadCursor(NULL, IDC_ARROW);
-  windowClass.hIcon = icon;
+  windowClass.hIcon = NULL;
   windowClass.lpfnWndProc = (WNDPROC)WindowProcedure;
   windowClass.lpszClassName = window.name.c_str();
   windowClass.lpszMenuName = NULL;

@@ -1,8 +1,6 @@
 #pragma once
 
-#include <d3d11.h>
-#include <dxgi1_3.h>
-#include <wrl/client.h>
+#include "pch.h"
 
 #include "DeviceResources.h"
 #include "RenderWindow.h"

@@ -1,10 +1,6 @@
 #pragma once
 
-#include <Windows.h>
-#include <d3d11.h>
-#include <wrl/client.h>
-
-#include "ThrowIfFailed.h"
+#include "pch.h"
 
 namespace Ekstra {
 struct DeviceResources {

@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.4.33205.214
+VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ekstra", "Ekstra.vcxproj", "{8A44569B-0D6D-47F7-A17A-3490C3F4E067}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ekstra.Win32", "Ekstra.Win32\Ekstra.Win32.vcxproj", "{65FCB4A4-9029-4B82-A234-51396F98BA9E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "notes", "notes", "{74982DF9-CC85-4326-8082-A6D19FE010CD}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ekstra", "Ekstra\Ekstra.vcxproj", "{5C071AD5-3EE9-4E1D-AB62-F10ECC3258AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{BD30244A-2F67-49E8-8D88-B6455178886C}"
 	ProjectSection(SolutionItems) = preProject
-		ComPtr.md = ComPtr.md
-		ThrowIfFailed.md = ThrowIfFailed.md
-		DirectX and COM.md = DirectX and COM.md
+		Notes\ComPtr.md = Notes\ComPtr.md
+		Notes\DirectX and COM.md = Notes\DirectX and COM.md
+		Notes\ThrowIfFailed.md = Notes\ThrowIfFailed.md
 	EndProjectSection
 EndProject
 Global
@@ -20,19 +22,27 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8A44569B-0D6D-47F7-A17A-3490C3F4E067}.Debug|x64.ActiveCfg = Debug|x64
-		{8A44569B-0D6D-47F7-A17A-3490C3F4E067}.Debug|x64.Build.0 = Debug|x64
-		{8A44569B-0D6D-47F7-A17A-3490C3F4E067}.Debug|x86.ActiveCfg = Debug|Win32
-		{8A44569B-0D6D-47F7-A17A-3490C3F4E067}.Debug|x86.Build.0 = Debug|Win32
-		{8A44569B-0D6D-47F7-A17A-3490C3F4E067}.Release|x64.ActiveCfg = Release|x64
-		{8A44569B-0D6D-47F7-A17A-3490C3F4E067}.Release|x64.Build.0 = Release|x64
-		{8A44569B-0D6D-47F7-A17A-3490C3F4E067}.Release|x86.ActiveCfg = Release|Win32
-		{8A44569B-0D6D-47F7-A17A-3490C3F4E067}.Release|x86.Build.0 = Release|Win32
+		{65FCB4A4-9029-4B82-A234-51396F98BA9E}.Debug|x64.ActiveCfg = Debug|x64
+		{65FCB4A4-9029-4B82-A234-51396F98BA9E}.Debug|x64.Build.0 = Debug|x64
+		{65FCB4A4-9029-4B82-A234-51396F98BA9E}.Debug|x86.ActiveCfg = Debug|Win32
+		{65FCB4A4-9029-4B82-A234-51396F98BA9E}.Debug|x86.Build.0 = Debug|Win32
+		{65FCB4A4-9029-4B82-A234-51396F98BA9E}.Release|x64.ActiveCfg = Release|x64
+		{65FCB4A4-9029-4B82-A234-51396F98BA9E}.Release|x64.Build.0 = Release|x64
+		{65FCB4A4-9029-4B82-A234-51396F98BA9E}.Release|x86.ActiveCfg = Release|Win32
+		{65FCB4A4-9029-4B82-A234-51396F98BA9E}.Release|x86.Build.0 = Release|Win32
+		{5C071AD5-3EE9-4E1D-AB62-F10ECC3258AC}.Debug|x64.ActiveCfg = Debug|x64
+		{5C071AD5-3EE9-4E1D-AB62-F10ECC3258AC}.Debug|x64.Build.0 = Debug|x64
+		{5C071AD5-3EE9-4E1D-AB62-F10ECC3258AC}.Debug|x86.ActiveCfg = Debug|Win32
+		{5C071AD5-3EE9-4E1D-AB62-F10ECC3258AC}.Debug|x86.Build.0 = Debug|Win32
+		{5C071AD5-3EE9-4E1D-AB62-F10ECC3258AC}.Release|x64.ActiveCfg = Release|x64
+		{5C071AD5-3EE9-4E1D-AB62-F10ECC3258AC}.Release|x64.Build.0 = Release|x64
+		{5C071AD5-3EE9-4E1D-AB62-F10ECC3258AC}.Release|x86.ActiveCfg = Release|Win32
+		{5C071AD5-3EE9-4E1D-AB62-F10ECC3258AC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {76ED6957-E543-4ED1-A7AE-4D50BEDB44F1}
+		SolutionGuid = {316E22FE-9E11-4593-97AA-253EFF4BA9F2}
 	EndGlobalSection
 EndGlobal

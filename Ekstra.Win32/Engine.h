@@ -1,13 +1,8 @@
 #pragma once
 
-#include <Windows.h>
-
-#include <memory>
-
-#include "DeviceResources.h"
 #include "RenderWindow.h"
+#include "DeviceResources.h"
 #include "Swapchain.h"
-#include "ThrowIfFailed.h"
 
 namespace Ekstra {
 struct Engine {

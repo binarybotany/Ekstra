@@ -1,18 +1,6 @@
 #pragma once
 
-#include <Windows.h>
-
-#include <string>
-
-#include "ThrowIfFailed.h"
-
-#ifndef UNICODE
-#define UNICODE
-#endif
-
-#ifndef WIN32_LEAN_AND_MEAN
-#define WIN32_LEAN_AND_MEAN
-#endif
+#include "pch.h"
 
 namespace Ekstra {
 struct RenderWindow {
@@ -38,4 +26,4 @@ struct RenderWindowController {
   static LRESULT CALLBACK WindowProcedure(HWND window, UINT msg, WPARAM wparam,
                                           LPARAM lparam);
 };
-}  // namespace Ekstra
+}

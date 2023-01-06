@@ -1,10 +1,8 @@
-#pragma once
+#ifndef PCH_H
+#define PCH_H
 
-#include <Windows.h>
-#include <exception>
-#include <cstdio>
+#include "framework.h"
 
-namespace Ekstra {
 class com_exception : public std::exception {
  public:
   com_exception(HRESULT hr) : result(hr) {}
@@ -22,4 +20,5 @@ class com_exception : public std::exception {
 inline void ThrowIfFailed(HRESULT hr) {
   if (FAILED(hr)) throw com_exception(hr);
 }
-}
+
+#endif
