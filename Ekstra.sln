@@ -7,9 +7,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ekstra", "Ekstra.vcxproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "notes", "notes", "{74982DF9-CC85-4326-8082-A6D19FE010CD}"
 	ProjectSection(SolutionItems) = preProject
-		COM Interfaces.md = COM Interfaces.md
 		ComPtr.md = ComPtr.md
 		ThrowIfFailed.md = ThrowIfFailed.md
+		DirectX and COM.md = DirectX and COM.md
 	EndProjectSection
 EndProject
 Global

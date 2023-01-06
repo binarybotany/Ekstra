@@ -5,21 +5,11 @@ void RenderWindowController::StartUp(RenderWindow &window, HINSTANCE instance,
                                      std::string name) {
   window.name = std::wstring(name.begin(), name.end());
 
-  HRESULT result = S_OK;
-
   if (window.instance == NULL)
     window.instance = (HINSTANCE)GetModuleHandle(NULL);
 
-  result = RegisterWindowClass(window);
-#if defined(DEBUG) || defined(_DEBUG)
-  if (FAILED(result))
-    Error::Display(result, L"Unable to register window class");
-#endif
-
-  result = CreateWindowHandle(window);
-#if defined(DEBUG) || defined(_DEBUG)
-  if (FAILED(result)) Error::Display(result, L"Unable to create window");
-#endif
+  ThrowIfFailed(RegisterWindowClass(window));
+  ThrowIfFailed(CreateWindowHandle(window));
 
   ShowWindow(window.windowHandle, SW_SHOWDEFAULT);
   UpdateWindow(window.windowHandle);

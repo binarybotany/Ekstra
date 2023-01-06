@@ -1,11 +1,10 @@
 #pragma once
 
 #include <Windows.h>
-#include <comdef.h>
 
 #include <string>
 
-#include "Error.h"
+#include "ThrowIfFailed.h"
 
 #ifndef UNICODE
 #define UNICODE

@@ -5,7 +5,6 @@
 #include <wrl/client.h>
 
 #include "DeviceResources.h"
-#include "Error.h"
 #include "RenderWindow.h"
 
 namespace Ekstra {

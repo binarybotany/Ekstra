@@ -7,6 +7,7 @@
 #include "DeviceResources.h"
 #include "RenderWindow.h"
 #include "Swapchain.h"
+#include "ThrowIfFailed.h"
 
 namespace Ekstra {
 struct Engine {

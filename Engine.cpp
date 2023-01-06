@@ -2,10 +2,14 @@
 
 namespace Ekstra {
 void EngineController::StartUp(Engine &engine, HINSTANCE instance) {
-  RenderWindowController::StartUp(engine.renderWindow, instance, "Ekstra");
-  DeviceResourcesController::StartUp(engine.deviceResources);
-  SwapchainController::StartUp(engine.swapchain, engine.renderWindow,
-                               engine.deviceResources);
+  try {
+    RenderWindowController::StartUp(engine.renderWindow, instance, "Ekstra");
+    DeviceResourcesController::StartUp(engine.deviceResources);
+    SwapchainController::StartUp(engine.swapchain, engine.renderWindow,
+                                 engine.deviceResources);
+  } catch (const com_exception &e) {
+    MessageBoxA(NULL, e.what(), "Error", MB_ICONERROR);
+  }
 }
 void EngineController::ShutDown(const Engine &engine) {
   SwapchainController::ShutDown(engine.swapchain);

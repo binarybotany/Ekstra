@@ -28,7 +28,7 @@ void DeviceResourcesController::StartUp(DeviceResources &resources) {
     // Handle device interface creation failure if it occurs.
     // For example, reduce the feature level requirement, or fail over
     // to WARP rendering.
-    Error::Display(result, L"Unable to create DirectX device");
+    ThrowIfFailed(result);
   }
 
   device.As(&resources.device);

@@ -31,17 +31,19 @@ void SwapchainController::StartUp(Swapchain &swapchain,
         resources.device.Get(), &swapchainDescription, &swapchain.swapchain);
   }
 
-  if (FAILED(result)) Error::Display(result, L"Unable to create swapchain");
+  ThrowIfFailed(result);
 
   // Set render target
   result = swapchain.swapchain->GetBuffer(0, __uuidof(ID3D11Texture2D),
                                           (void **)&swapchain.backBuffer);
-  if (FAILED(result)) Error::Display(result, L"Unable to get back buffer");
+
+  ThrowIfFailed(result);
 
   result = resources.device->CreateRenderTargetView(
       swapchain.backBuffer.Get(), nullptr,
       swapchain.renderTarget.GetAddressOf());
-  if (FAILED(result)) Error::Display(result, L"Unable to set render target");
+
+  ThrowIfFailed(result);
 
   swapchain.backBuffer->GetDesc(&swapchain.description);
 }
