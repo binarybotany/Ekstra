@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{BD30244A
 	ProjectSection(SolutionItems) = preProject
 		Notes\ComPtr.md = Notes\ComPtr.md
 		Notes\DirectX and COM.md = Notes\DirectX and COM.md
+		Notes\Exceptions.md = Notes\Exceptions.md
 		Notes\ThrowIfFailed.md = Notes\ThrowIfFailed.md
 	EndProjectSection
 EndProject
