@@ -8,7 +8,7 @@ void SwapchainController::StartUp(Swapchain &swapchain,
 
   DXGI_SWAP_CHAIN_DESC swapchainDescription;
   ZeroMemory(&swapchainDescription, sizeof(DXGI_SWAP_CHAIN_DESC));
-  swapchainDescription.Windowed = TRUE;
+  swapchainDescription.Windowed = FALSE;
   swapchainDescription.BufferCount = 2;
   swapchainDescription.BufferDesc.Format = DXGI_FORMAT_B8G8R8A8_UNORM;
   swapchainDescription.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;

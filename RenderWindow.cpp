@@ -10,6 +10,7 @@ void RenderWindowController::StartUp(RenderWindow &window, HINSTANCE instance,
 
   ThrowIfFailed(RegisterWindowClass(window));
   ThrowIfFailed(CreateWindowHandle(window));
+  Fullscreen(window);
 
   ShowWindow(window.windowHandle, SW_SHOWDEFAULT);
   UpdateWindow(window.windowHandle);
@@ -93,6 +94,23 @@ HRESULT RenderWindowController::CreateWindowHandle(RenderWindow &window) {
   window.windowHandle = windowHandle;
 
   return S_OK;
+}
+
+void RenderWindowController::Fullscreen(const RenderWindow &window) {
+  // Might need to do something with the windowSize RECT here
+  DWORD style = GetWindowLongW(window.windowHandle, GWL_STYLE);
+  MONITORINFO monitor_info = {sizeof(MONITORINFO)};
+  GetMonitorInfoW(
+      MonitorFromWindow(window.windowHandle, MONITOR_DEFAULTTOPRIMARY),
+      &monitor_info);
+
+  SetWindowLongW(window.windowHandle, GWL_STYLE, style & ~WS_OVERLAPPEDWINDOW);
+
+  SetWindowPos(window.windowHandle, HWND_TOP, monitor_info.rcMonitor.left,
+               monitor_info.rcMonitor.top,
+               monitor_info.rcMonitor.right - monitor_info.rcMonitor.left,
+               monitor_info.rcMonitor.bottom - monitor_info.rcMonitor.top,
+               SWP_NOOWNERZORDER | SWP_FRAMECHANGED);
 }
 
 LRESULT CALLBACK RenderWindowController::WindowProcedure(HWND window, UINT msg,

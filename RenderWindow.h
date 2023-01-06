@@ -33,6 +33,7 @@ struct RenderWindowController {
  private:
   static HRESULT RegisterWindowClass(RenderWindow &window);
   static HRESULT CreateWindowHandle(RenderWindow &window);
+  static void Fullscreen(const RenderWindow &window);
 
   static LRESULT CALLBACK WindowProcedure(HWND window, UINT msg, WPARAM wparam,
                                           LPARAM lparam);
